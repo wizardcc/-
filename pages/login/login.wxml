@@ -1,0 +1,30 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__hd"></view>
+    <view class="page__bd">
+      <form bindsubmit='formSubmit' bindreset="formReset" method="post" id="loginForm">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                      <view class="weui-label">用户名</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                      <input class="weui-input" placeholder="请输入用户名" name="user"/>
+                  </view>
+          </view>
+          <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                      <view class="weui-label">密码</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                      <input class="weui-input" placeholder="请输入密码" type="password" name="pass"/>
+                  </view>
+          </view>
+        </view>
+        <view class="weui-cells__tips">用户名和密码为信息门户账户密码</view>
+        <view class="weui-btn-area">
+            <button class="weui-btn" formType='submit' type="primary" bindtap="">登录</button>
+            <button class="weui-btn" formType='reset' type="primary" bindtap="">重置</button>
+        </view>
+      </form>
+    </view>
+</view>

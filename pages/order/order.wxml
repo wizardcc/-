@@ -1,0 +1,77 @@
+<view class='page'>
+  <!--设置预约表单-->
+  <view class="page__hd">
+    <text class='top'>预约详情</text>
+  </view>
+  <view class="button-sp-area">
+    <button class="weui-btn" type="primary" plain="true" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">授权</button>
+  </view>
+  <view class="page__bd">
+    <form bindsubmit='formSubmit' bindreset='formReset'>
+    <view class="weui-cells__title">基本信息</view>
+    <view class='weui-cells weui-cells_after-title'>
+      <view class='weui-cell weui-cell_input'>
+        <!-- 姓名-->
+        <view class="weui-cell__hd">
+          <view class="weui-label">访客姓名：</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入姓名" name='user' type='text'/>
+        </view>
+      </view>
+      <view class='weui-cell weui-cell_input'>
+        <!-- 车牌号-->
+        <view class="weui-cell__hd">
+          <view class="weui-label">车牌号：</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="英文字母请大写" name='vehicle' type='text'/>
+        </view>
+      </view>
+      <view class='weui-cell weui-cell_input'>
+        <!-- 电话-->
+        <view class="weui-cell__hd">
+          <view class="weui-label">访客电话：</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入电话号码" name='tel' type='number'/>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">日期:</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{date}}" start="{{date}}" bindchange="bindDateChange" name='date'>
+            <view class="weui-input">{{date}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cells__title">拜访事由</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="请输入拜访事由" style="height: 3.3em" name='reason'/>
+                </view>
+            </view>
+        </view>
+      <view class='timepicker'>
+        <text>时间段选择：</text>
+        <picker mode="time" value="{{intime}}" end='24:00' bindchange="bindinTimeChange" name='intime'>
+          <view class="picker">
+            {{intime}}
+          </view>
+        </picker>
+        至
+        <picker mode="time" value="{{outtime}}" start='{{intime}}' end='24:00' bindchange="bindoutTimeChange" name='outtime'>
+          <view class="picker">
+            {{outtime}}
+          </view>
+        </picker>
+      </view>
+      <button formType='submit' type='primary'>提交</button>
+      <button formType='reset'>重置</button>
+    </view>
+    </form>
+  </view>
+</view>

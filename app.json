@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/order/order",
+    "pages/index/index",
+    "pages/login/login"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "南京工程学院门禁预约",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#000000"
+  },
+  "tabBar": {
+    "color": "#8c8c8c",
+    "selectedColor": "1afa29",
+    "list": [
+      {
+        "iconPath": "pages/images/输入.png",
+        "selectedIconPath": "pages/images/输入_填充.png",
+        "pagePath": "pages/order/order",
+        "text": "预约"
+      },
+      {
+        "iconPath": "pages/images/首页.png",
+        "selectedIconPath": "pages/images/首页_填充.png",
+        "pagePath": "pages/index/index",
+        "text": "查看"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket":20000,
+    "uploadFile": 2000,
+    "downloadFile": 20000
+  },
+  "debug": false
+}

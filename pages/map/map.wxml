@@ -1,0 +1,15 @@
+<view class='page'>
+  <!-- 设置轮换banner -->
+  <view>
+    <swiper indicator-dots="ture" autoplay="true" interval="5000" duration="800" circular='true' class='banner' style='height:{{bannerHeight}}px'>
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="pic" mode='widthFix' bindload='imageLoad'/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 设置地图导航 -->
+<map id="map" longitude="118.882426" latitude="31.922715" markers="{{school}}" scale="15"  style="width: 100%; height: 250px;">
+</map>
+</view>

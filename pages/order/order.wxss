@@ -1,0 +1,39 @@
+/*页面四边样式*/
+.page{
+margin: 0rpx 10rpx 0rpx 10rpx;
+}
+/*标题栏*/
+.top{
+text-align: center;
+display: flex;
+flex-direction:column;
+}
+/* 工单具体页面 */
+.form{
+  justify-content: center;
+  display: column;
+}
+/* 时间选择 */
+.timepicker {
+  height: 85rpx;
+  line-height: 85rpx;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #888;
+  border-bottom: 1rpx solid #efefef;
+}
+
+.timepicker picker {
+  color: #64bff1;
+  height: 55rpx;
+  line-height: 55rpx;
+  margin: 0 2%;
+  padding: 0 2%;
+  border: 1rpx solid #64bff1;
+  border-radius: 30rpx;
+}
+.mini-btn{
+    margin-right: 5px;
+}
